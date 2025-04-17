@@ -1,0 +1,113 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #838383;
+  --overlay-opacity: 0.8;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #c0c0c0;
+  --overlay-opacity: 0.9;
+}
+
+body {
+  background-image: url("back_halftransparent.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #838383;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -15px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 2;
+  transform: scale(0.4) translateX(-100px) translateY(-30px);
+  transform-origin: center center;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 44%;
+  left: 43%;
+  width: 55%;
+  height: 55%;
+  background-image: url("animatedoverlay.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center center;
+}
+
+.contact-image {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.contact-image img {
+  width: auto;
+  height: auto;
+}
+
+.contact-image a {
+  display: block;
+  padding: 10px;
+  color: #838383;
+  text-decoration: none;
+}
+
+.contact-image {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.contact-image img {
+  width: auto;
+  height: auto;
+}
+
+.contact-image {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.contact-image img {
+  width: auto;
+  height: auto;
+}
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+body::before {
+  animation: pulse 3s ease-in-out infinite;
+}
